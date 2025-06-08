@@ -1,0 +1,147 @@
+.about1 {
+    background: url("https://source.unsplash.com/1600x900/?neon,gaming") no-repeat center center/cover; /* Updated to a valid URL */
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about1::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+    z-index: 1;
+}
+
+.about1 div {
+    position: relative;
+    z-index: 2;
+    animation: slideDown 1.5s ease-out;
+}
+
+.about1 h2 {
+    font-size: 3.8rem;
+    color: #00ffcc; /* Neon color */
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+    margin: 0;
+}
+
+.about1 p {
+    font-size: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+}
+
+.t, .team {
+    padding: 60px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.t h2, .team h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff007f; /* Neon pink */
+    text-shadow: 0 0 15px #ff007f, 0 0 30px #ff007f;
+}
+
+.t p, .team-grid {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+    background: linear-gradient(145deg, #222, #444);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 132, 255, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(255, 0, 127, 0.7);
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px #00ffcc; /* Neon glow */
+}
+
+.team-member h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5rem;
+    color: #00ffcc; /* Neon color */
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.team-member p {
+    color: #aaa;
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Glow Button */
+.glow-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #00ffcc; /* Neon border */
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #00ffcc; /* Neon glow */
+    transition: 0.3s;
+}
+
+.glow-button:hover {
+    background: #00ffcc; /* Neon background on hover */
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #00ffcc; /* Enhanced glow on hover */
+}

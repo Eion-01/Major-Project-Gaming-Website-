@@ -1,0 +1,107 @@
+
+.top-game {
+    height: 18vw;
+    font-size: 2vw;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;
+    animation: glow 2s infinite alternate; /* Infinite glow animation */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #00e5ff, 0 0 20px #b400fb, 0 0 30px #00e5ff;
+    }
+    100% {
+        text-shadow: 0 0 20px #b400fb, 0 0 40px #00e5ff, 0 0 60px #b400fb;
+    }
+}
+.ic{
+height: 40vw;
+
+}
+.icons {
+    background: url('https://wallpaperaccess.com/full/3231246.png') no-repeat center center;
+    /* background: url('https://wallpaperaccess.com/full/4231189.jpg') no-repeat center center; */
+    background-size: cover;
+
+    position: absolute;
+    right: 5%;
+    width: 90%;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    margin: 4vw 0; 
+    border-radius: 4vw; 
+    background-color: black;
+    overflow: hidden; 
+    box-shadow: 0 8px 16px cyan;
+    height: 22vw;
+}
+
+
+.icon {
+    height: 12vw;
+    width: 13vw;
+    background: rgb(27, 34, 71);
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.icon span {
+    z-index: 1;
+}
+
+.icon span img {
+    border-radius: 20px;
+    height: 10vw;
+    width: 11vw;
+    transition: 0.3s ease-in-out;
+}
+
+.icon::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 600px;
+    left: 75px;
+    top: -100px;
+    background: linear-gradient(#00e5ff, #b400fb);
+    animation: animate 10s linear infinite;
+    border-radius: 20px;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.icon::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: white;
+    border-radius: 20px;
+}
+
+/* Neon hover effect */
+.icon span img:hover {
+    box-shadow: 0 0 20px rgb(255, 0, 0), 0 0 40px red, 0 0 60px red;
+    transform: scale(1.1);
+}

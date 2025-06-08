@@ -1,0 +1,214 @@
+
+.n h1{
+    /* background: rgb(15 13 22);
+    border: 2px solid #00d474;  */
+    border-radius: 15px;
+    height: 16vw;
+    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    color: #fff; /* White text color */
+    text-shadow: 
+      0 0 5px #0a84ff, /* Neon purple glow */
+      0 0 10px #0a84ff,
+      0 0 15px #0a84ff,
+      0 0 20px #0a84ff, /* Stronger glow */
+      0 0 30px #0a84ff,
+      0 0 40px #0a84ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.wr {
+    background: #09080d;
+    /* border: 2px solid #00d474; 
+    border-radius: 15px; */
+   
+    height: 35vw;
+    display: flex;
+    width: 99.5%;
+    justify-content: space-around;
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 2rem; }
+
+    
+.com {
+    
+    width: 400px;
+    height: 280px;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #000, #0a0a0a); /* Subtle gradient for depth */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: transform 0.5s ease;
+    border-radius: 15px; /* Increased rounded edges */
+    overflow: hidden; /* Hide overflow for smooth effects */
+}
+
+.com:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift effect on hover */
+}
+
+/* Removed the glow overlay */
+.com:before {
+    display: none;
+}
+
+.com img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* filter: brightness(0.4) contrast(1.2); */
+    border-radius: 15px;
+    transition: filter 0.5s ease;
+}
+
+.com:hover img {
+    filter: brightness(0.6) contrast(1.5); 
+}
+
+
+.com .info {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    text-shadow: 0 0 8px cyan, 0 0 15px cyan, 0 0 30px cyan; /* Glow for text */
+    text-align: center; 
+    padding: 1rem;
+}
+
+/* Adding the background box */
+.com .info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 90%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    border-radius: 12px; /* Rounded edges for a smooth look */
+    transform: translateX(-50%);
+    z-index: -1;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Subtle neon glow */
+}
+
+.com:hover .info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.com .info p {
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-shadow: 0 0 5px cyan, 0 0 15px cyan; /* Subtle neon glow */
+}
+
+.com .btn {
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    background: transparent;
+    color: cyan;
+    border: 2px solid cyan;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 0 8px cyan, 0 0 15px cyan; /* Neon border glow */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+.com .btn:hover {
+    box-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 50px cyan; /* Enhanced glow on hover */
+    background: linear-gradient(90deg, cyan, #00d474);
+    color: #000;
+    transform: scale(1.1); /* Slight scaling effect */
+}
+
+/* Neon flicker animation */
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 8px cyan, 0 0 15px cyan, 0 0 30px cyan;
+    }
+    20%, 24%, 55% {
+        text-shadow: 0 0 3px cyan, 0 0 6px cyan, 0 0 15px cyan;
+    }
+}
+.com:nth-child(1) {
+    box-shadow: 0 0 10px red, 0 0 20px red;
+}
+
+.com:nth-child(1) .info, 
+.com:nth-child(1) .btn {
+    text-shadow: 0 0 8px red, 0 0 15px red;
+    box-shadow: 0 0 8px red, 0 0 15px red;
+    border-color: red;
+}
+
+.com:nth-child(1) .btn:hover {
+    background: linear-gradient(90deg, red, #ff4500);
+    box-shadow: 0 0 15px red, 0 0 30px red;
+}
+
+/* Second box - Blue Neon */
+.com:nth-child(2) {
+    box-shadow: 0 0 10px blue, 0 0 20px blue;
+}
+
+.com:nth-child(2) .info, 
+.com:nth-child(2) .btn {
+    text-shadow: 0 0 8px blue, 0 0 15px blue;
+    box-shadow: 0 0 8px blue, 0 0 15px blue;
+    border-color: blue;
+}
+
+.com:nth-child(2) .btn:hover {
+    background: linear-gradient(90deg, blue, #00aaff);
+    box-shadow: 0 0 15px blue, 0 0 30px blue;
+}
+
+/* Third box - Green Neon */
+.com:nth-child(3) {
+    box-shadow: 0 0 10px lime, 0 0 20px lime;
+}
+
+.com:nth-child(3) .info, 
+.com:nth-child(3) .btn {
+    text-shadow: 0 0 8px lime, 0 0 15px lime;
+    box-shadow: 0 0 8px lime, 0 0 15px lime;
+    border-color: lime;
+}
+
+.com:nth-child(3) .btn:hover {
+    background: linear-gradient(90deg, lime, #00ff7f);
+    box-shadow: 0 0 15px lime, 0 0 30px lime;
+}
+
+/* Fourth box - Purple Neon */
+.com:nth-child(4) {
+    box-shadow: 0 0 10px purple, 0 0 20px purple;
+}
+
+.com:nth-child(4) .info, 
+.com:nth-child(4) .btn {
+    text-shadow: 0 0 8px purple, 0 0 15px purple;
+    box-shadow: 0 0 8px purple, 0 0 15px purple;
+    border-color: purple;
+}
+
+.com:nth-child(4) .btn:hover {
+    background: linear-gradient(90deg, purple, #800080);
+    box-shadow: 0 0 15px purple, 0 0 30px purple;
+}
+

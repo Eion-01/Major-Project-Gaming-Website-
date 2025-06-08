@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+.a1{
+  height: 40vw;
+}
+.a{
+
+ position: absolute;
+ left: 9.5vw;
+}
+.social-icons{
+  height: 2vw;
+}
+:root {
+  --color-bg: #000; /* Black background */
+  --color-text-primary: #ffffff; /* White text */
+  --color-text-secondary: #b0b0b0; /* Light gray */
+  --color-neon-cyan: #00f0ff;
+  --color-neon-magenta: #ff00d4;
+  --color-neon-gradient: linear-gradient(90deg, #00f0ff, #ff00d4);
+  --border-radius: 0.75rem;
+  --shadow-light: 0 4px 12px rgba(255, 255, 255, 0.1);
+  --transition-fast: 0.25s ease-in-out;
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* Reset */
+/* *, *::before, *::after {
+  box-sizing: border-box;
+} */
+.a main#about {
+  max-width: 1200px; /* Increased width */
+  width: 100%;
+  background: #1a1a1a; /* Dark gray background for the card */
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  padding: 5.55rem 5rem; /* Adjust padding if needed */
+  text-align: center;
+  transition: box-shadow var(--transition-fast);
+}
+
+.a main#about:hover {
+  box-shadow: 0 12px 25px rgba(0, 240, 255, 0.3), 0 0 20px rgba(255, 0, 212, 0.3);
+}
+
+.a h1 {
+  margin: 0 0 1rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+  background: var(--color-neon-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  line-height: 1.1;
+  user-select: none;
+  letter-spacing: 0.02em;
+}
+
+.a h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  margin-bottom: 2.25rem;
+}
+
+.a p.lead {
+  font-size: 1.125rem;
+  max-width: 720px;
+  margin: 0 auto 0;
+  color: var(--color-text-secondary);
+}
+
+/* Neon accent underline */
+.a .neon-underline {
+  width: 72px;
+  height: 4px;
+  margin: 1.75rem auto 2.5rem auto;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--color-neon-cyan), var(--color-neon-magenta));
+  box-shadow:
+    0 0 8px var(--color-neon-cyan),
+    0 0 12px var(--color-neon-magenta);
+  transition: box-shadow var(--transition-fast);
+}
+
+.a main#about:hover .neon-underline {
+  box-shadow:
+    0 0 16px var(--color-neon-cyan),
+    0 0 24px var(--color-neon-magenta);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+  main#about {
+    padding: 2.25rem 1.5rem;
+  }
+}
+
+
+
+.a .contact-info a {
+  color: var(--neon-pink);
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: var(--shadow-glow-pink);
+  transition: color var(--transition-time), text-shadow var(--transition-time);
+}
+
+.a .contact-info a:hover,
+.a .contact-info a:focus {
+  color: var(--neon-green);
+  text-shadow: var(--shadow-glow-green);
+  outline: none;
+}
+
+.a .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.a .social-button {
+color: var(--neon-cyan);
+font-size: 2.5rem;
+text-shadow: var(--shadow-glow-cyan);
+transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.a .social-button:hover,
+.social-button:focus {
+transform: scale(1.2);
+text-shadow: var(--shadow-glow-pink);
+}
+
+
+
+/* Simple SVG icon styling */
+.a svg {
+  fill: currentColor;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+
+@media (max-width: 400px) {
+  .contact-section {
+    padding: 2rem 1.5rem;
+  }
+  .contact-section h2 {
+    font-size: 2.25rem;
+  }
+  .contact-section {
+  overflow: visible; /* Allow content to overflow */
+}
+}
